@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 class Product
 {
     public string name;
