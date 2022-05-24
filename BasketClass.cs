@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 class Basket
 {
+    public decimal total_price = 0.00m;
 
     public List<Product> CreateBasket()
     {
@@ -16,15 +17,21 @@ class Basket
         basket.Add(prod);
     }
 
-    public void ViewBasket(List<Product> basket)
+    public void ViewItemsInBasket(List<Product> basket)
     {
         foreach (Product prod in basket)
         {
-            Console.WriteLine(prod.name);
-            Console.WriteLine(prod.description);
-            Console.WriteLine(prod.price);
+            Console.Write(prod.name + ", ");
         }
-        
+    }
 
+    public decimal DisplayPrice(List<Product> basket, decimal total_price)
+    {
+        foreach(Product prod in basket)
+        {
+            total_price =+ prod.price;
+        }
+
+        return total_price;
     }
 }

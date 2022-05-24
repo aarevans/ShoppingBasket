@@ -20,7 +20,8 @@ class Program
         basket.AddToBasket(prod3, new_basket);
 
         //Basket method to view the current products in the new_basket list
-        basket.ViewBasket(new_basket);
+        basket.ViewItemsInBasket(new_basket);
+        Console.WriteLine(basket.DisplayPrice(new_basket, basket.total_price));
 
     }
 }
